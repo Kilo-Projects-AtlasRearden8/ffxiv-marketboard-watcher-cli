@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffxiv-marketboard-watcher-cli"
+version = "0.1.0"
+description = "Local-first CLI for FFXIV players to log marketboard prices, compute margins, and flag profitable items."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["ffxiv", "marketboard", "gil", "cli", "json"]
+
+[project.scripts]
+ffxiv-marketboard = "ffxiv_marketboard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
